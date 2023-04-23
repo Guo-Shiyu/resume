@@ -16,12 +16,18 @@ Upload `chicv.typ`, `fontawesome.typ`, `resume.typ` and `fonts/FontAwesome6.otf`
 
 ### Locally
 
+#### linux
 Assume that you have installed `typst` cli already and it's in your `$PATH`.
 
 ```bash
 git clone https://github.com/matchy233/typst-chi-cv-template.git
 cd typst-chi-cv-template
 typst --font-path ./fonts compile resume.typ resume.pdf
+```
+
+#### windows 
+``` bash 
+typst --font-path ./fonts c ./resume.typ
 ```
 
 ## Sample Output

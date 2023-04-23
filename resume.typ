@@ -2,101 +2,77 @@
 
 #show: chicv
 
-= Chi Zhang
+= 郭胜群
 
-#fa[#envelope] skyzh\@cmu.edu |
-#fa[#github] #link("https://github.com/skyzh")[github.com/skyzh] |
-#fa[#globe] #link("https://skyzh.dev")[skyzh.dev] |
-#fa[#linkedin] #link("https://www.linkedin.com/in/alex-chi-skyzh/")[alex-chi-skyzh]
+#fa[#envelope] im.shiyu1225\@gmail.com |
+#fa[#github] #link("https://github.com/Guo-Shiyu")[github.com/shiyu] |
+#fa[#globe] #link("https://github.com/Guo-Shiyu.github.io")[im.shiyu.blog] |
+#fa[#phone] (+86) 155 2844 7930
 
 == Education
 #cventry(
-  tl: "Carnegie Mellon University",
-  tr:  "2022/08 - 2023/12 (Expected)",
-  bl: "Master of Science in Computer Science, GPA 4.09/4.33",
-  br: "Pittsburgh, PA, USA"
+  tl: "四川大学 (SiChuan University)",
+  tr: "2019/09 - 2024/06",
+  bl: "B.E. Computer Science and Technology",
+  br: " "
 )[
-  - Teaching Assistant for 15-445/645 Database Systems (Fall 2022, Spring 2023)
+  - 四川大学滑板社社长 (Fall 2021, Spring 2022)
 ]
-#cventry(
-  tl: "Shangehai Jiao Tong University",
-  tr: "2018/09 - 2022/06",
-  bl: "B. Eng in Computer Science and Technology",
-  br: "Shangehai, China"
-)[
-  - GPA 93.80/100, Rank 1/149, National Scholarship 2019 (Top 0.2% national-wide)
-  - A+ Courses: Operating Systems, Computer Architecture, Computer Networks, and 28 others
-]
+
 == Work Experience
 #cventry(
-  tl: "RisingWave Labs",
-  tr: "2021/08 - 2022/07",
-  bl: "Database System R&D Intern",
-  br: "Shanghai, China"
+  tl: "仲阳天王星量化研究院 (Uranus Research Lab)",
+  tr: "2022/04 - Precent",
+  bl: "Trading System Developer Intern",
+  br: "Chengdu, China"
 )[
-  - *Top contributor of #iconlink(
-    "https://github.com/risingwavelabs/risingwave",
-    text: "RisingWave",
-    icon: github)* _as of 2023/03_. RisingWave is a database system with PostgreSQL-compatible interface that incrementally maintains materialized views. Worked on the development of almost all components related to stream computing and state store.
-  - *Streaming Index Joins*: Designed shared state and streaming index in RisingWave; implemented index lookup join executor; implemented delta join DAG optimizer transformations; implemented distributed delta join scheduler
-  - *Performance Improvement*: Conducted intensive benchmarks and analyzed performance issues. Fixed bugs, proposed strategies, and led cross-team collaboration which improved the system throughput by 10x in a 3-month period
-  - *Developer Experience*. Initiated the RiseDev development tool to start a RisingWave cluster with one command, which is deeply integrated into the development workflow across unit testing, integration testing, and benchmarking. Built RisingWave Streaming Dashboard that shows cluster metrics and visualizes streaming query plans in one place
-  - *Mentoring*. Mentored database kernel interns and helped their integration into the team. Maintained overview documents of the database kernel to facilitate knowledge transfer and help new hires learn about the system.
+  - *Design and Implement Lock-free Data Structures Based on Shared Memory*: 基于 C++17 PMR 实现的共享内存分配库, 通过记录元数据实现多进程共享自定义数据结构以及 STL 容器. 在此基础上参照 DPDK Ring 等实现了 Lock-free MPMC Queue 以及其他无锁数据结构.
+
+  - *Performance Improvement Project*: 参与并主导了简单的性能优化工程, 包括瓶颈定位, 优化. 通过重写数据结构, 去除 critical path 堆分配与 syscall, 调整数据布局增加缓存局部性, 缓存预热, 编译优化, 操作系统调整等手段降低性能毛刺, 提高性能表现.
+
+  - *Mentoring*: 带领 3 人小队完成了一部分交易支持系统的原型开发, 通过 Ray 集群以及 Redis, TiDB, Django 等节点完成了交易数据的采集, 存储, 展示. 在此过程中负责 C++ 节点开发以及任务调度.
+ 
+  - *Develop Experience*: 完善 CI/CD 工作流, 参与 C++ 编码规范制定, 参与编译环境, Gitlab repo 管理. 学到很多关于技术选型以及跨团队协作的知识.
+]
+
+== Skills
+- *Program*: 熟练使用 C++17, 部分 C++20, 对语言特性, 惯用法, 标准库, 常见问题和工具链有一定了解. 掌握 C/Rust/Lua, 能自行调试和解决常见问题, 了解并应用过以上语言之间的 FFI. 能用 Python/JS/Java/C\# 解决简单任务.  
+
+- *PL Theory and Implement*: 出于兴趣了解过一些编程语言的特性以及实现. 对编译理论, 类型系统, 脚本语言虚拟机实现 (Lua) 和编译器实现相关内容有少量了解. 
+
+- *Learn from Open-Source*: 阅读过部分 Lua5.4, Clang (Preprocessor), LLVM (New Pass Manager / Containers), libc++ (Algorithm), rustc (Parser) 的源代码, 并据此解决开发中遇到的问题. 简单了解过并尊重开源协议.
+
+- *Basic Software Engineering Literacy*: 对 OOP (继承与子类型, 多态), 函数式编程思想 (组合, 不可变, 惰性), 设计模式 (访问者, 工厂,  单例等) 有简单了解. 开发习惯良好, 比较流畅的使用 Git/Github, Google 等开发工具. 
+
+- *Development Tool*: 能适应大部分 OS / IDE, usually Visual Studio (Windows) and  VS Code Remote / Vim (Ubuntu). 
+
+== Personal Project 
+#cventry(
+  tl: "AyanBot" + " " + iconlink("https://github.com/Guo-Shiyu/AyanBot", icon: github),
+  tr: "2021/12 - Present",
+  bl: " 基于 libhv 等库实现的 C++ Onebot SDK, 用于编写 QQ 机器人聊天服务."
+)[
+  - 仿照 LLVM 的 Pass 调度机制完成了各种插件服务的调度.
+  - 基于 event loop 实现了 Future/Promise 以及 Callback 风格异步调用.
 ]
 
 #cventry(
-  tl: "ByteDance, Ltd.",
-  tr: "2021/06 - 2021/08",
-  bl: "Storage System R&D Intern, TerarkDB Team",
-  br: "Beijing, China"
+  tl: "Trajectory" + " (unfinished) " + iconlink("https://github.com/Guo-Shiyu/Trajectory", icon: github),
+  tr: "2021/09 - 2022/01",
+  bl: " 基于 easyx, sol2, libhv 等库实现的仿弹弹堂联机游戏."
 )[
-  - *Co-Optimized #iconlink(text: "TerarkDB", icon: github, "https://github.com/bytedance/terarkdb")* and *#iconlink(text: "ZenFS", icon: github, "https://github.com/westerndigitalcorporation/zenfs")*. Implemented Zone-aware Garbage Collection in TerarkDB and WAL-Aware Zone Allocator in ZenFS, which reduced 3-4x of space amplification and improved the p999 tail latency by 100x
-  /*
-  - Implemented *Zone-Aware Garbage Collection* in *TerrakDB* for Zoned Namespace SSDs, which reduced 3-4x of space amplification caused by interleaving write lifetime in a single ZNS zone. #iconlink("https://github.com/bytedance/terarkdb", icon: github)
-  - Added observability facilities to *ZenFS* (by Western Digital) to analyze bottlenecks and implemented a *WAL-Aware Zone Allocator*, which reduced the p999 tail latency by 100x. #iconlink("https://github.com/bzbd/zenfs", icon: github)
-  */
+  - 多服务端, 支持联机, 战斗服务器和登录服务器分离, 地图等资源文件热更新. 
+  - 使用 C++ 完成底层模块, 大量使用 Lua 脚本编写上层逻辑, 地图, 动画等资源文件.
+  - 学到了很多设计模式, 游戏编程, linux 网络编程实践经验.  
 ]
 
 #cventry(
-  tl: "PingCAP, Inc.",
-  tr: "2020/08 - 2021/01",
-  bl: "Storage System R&D Intern",
-  br: "Shanghai, China"
+  tl: "Miscellaneous",
+  tr: "-",
 )[
-  - Built LSM-based storage engine *#iconlink("https://github.com/tikv/agatedb", icon: github, text: "AgateDB")* from ground-up. Inspired by WiscKey and BadgerDB, AgateDB separates large vallues from LSM tree into value log, so as to reduce write amplification.
+  - *#iconlink(icon: github, text: "arithmetic-expr-calculator", "https://github.com/Guo-Shiyu/ArithmeticExpressionCalculator")* 通过递归下降解析算术表达式, 支持自定义 Pass 进行语法树变换.  
+  - *#iconlink(icon: github, text: "luac-rs (in proto)", "https://github.com/Guo-Shiyu/luac-rs")* 尝试使用 Rust 实现 Lua5.4 源代码到字节码的编译器, 处于原型阶段. 
+  - *#iconlink(icon: github, text: "scu-cids (in private)", "https://github.com/scu-covariant")* 内网环境下的教室终端管理系统, 支持即时消息, 教室课表展示等终端管理功能.
 ]
 
-== Open-Source Contributions
-
-#cventry(
-  tl: "cmu-db/busttub" + " " + iconlink("https://github.com/cmu-db/bustub", icon: github),
-  tr: "2022/08 - Now"
-)[
-  - Lead the development of the BusTub database system. Added SQL support/query processing layer to the system.
-  - Redesigned course projects to help students better understand the concepts and apply them to real-world scenarios. Developed leaderboard tests to challenge advanced students and enable further study.
-
-]
-
-#cventry(
-  tl: "RisingLight Community" + " " + iconlink("https://github.com/risinglightdb", icon: github),
-  tr: "2022/01 - Now",
-)[
-  - Lead the development of *RisingLight*, an OLAP database system for educational purpose.
-]
-
-#cventry(
-  tl: "TiKV Community" + " " + iconlink("https://github.com/tikv", icon: github),
-  tr: "2020/05 - Now"
-)[
-  - Maintains *TiKV Coprocessor*, the push-down execution framework of TiDB. Mentored community members to contribute features (e.g. new data types, plugin system) in the *LFX Mentorship*. #iconlink("https://github.com/tikv/tikv/issues/9066")  #iconlink("https://github.com/tikv/tikv/issues/9747")
-]
-
-#cventry(
-  tl: "Personal Projects",
-  tr: "5.3k followers " + iconlink(text: "skyzh", icon: github, "https://github.com/skyzh")
-)[
-  - *#iconlink(icon: github, text: "mini-lsm", "https://github.com/skyzh/mini-lsm")* (#fa[#star]1k) Build a simple LSM-Tree storage system in Rust in a week
-  - *#iconlink(icon: github, text: "type-exercise-in-rust", "https://github.com/skyzh/mini-lsm")* (#fa[#star]1k) Learn Rust generics by implementing a vectorized expression evaluation framework
-]
-
-#align(right, text(fill: gray)[Last Updated on Mar 30, 2023])
+#align(right, text(fill: gray)[Last Updated on Apr 20, 2023])
