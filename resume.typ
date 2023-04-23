@@ -6,7 +6,7 @@
 
 #fa[#envelope] im.shiyu1225\@gmail.com |
 #fa[#github] #link("https://github.com/Guo-Shiyu")[github.com/shiyu] |
-#fa[#globe] #link("https://github.com/Guo-Shiyu.github.io")[im.shiyu.blog] |
+#fa[#globe] #link("https://Guo-Shiyu.github.io/")[im.shiyu.blog] |
 #fa[#phone] (+86) 155 2844 7930
 
 == Education
